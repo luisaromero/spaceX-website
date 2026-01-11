@@ -5,6 +5,8 @@ const useNavigation = navRef => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
 
+    console.log('isMenuOpen', isMenuOpen)
+
     const getScreenSize = () => {
         setIsMobileView(window.innerWidth < MOBILE_BREAKING_POINT ? true : false);
     };
