@@ -12,8 +12,8 @@ const Routing = () => (
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route exact path="/launches" component={PastLaunches} />
-                <Route exact path="/rocket/:id" component={Rocket} />
+                <Route exact path="/launches" element={<PastLaunches />} />
+                <Route exact path="/rocket/:id" element={<Rocket />} />
             </Routes>
         </div>
     </Router>
