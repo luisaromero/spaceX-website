@@ -23,6 +23,7 @@ const NavBar = () => {
     const navRef = useRef(null)
     const { isMobileView, isMenuOpen, setIsMenuOpen } = useNavigation(navRef)
     const { data, loading, error } = useQuery(GET_ROCKET_NAMES)
+    console.log({ data })
 
     if (loading) return <Loader />
     if (error) return <Error />
