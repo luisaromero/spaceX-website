@@ -1,9 +1,52 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
+import { gql } from '@apollo/client';
+import { useQuery } from "@apollo/client/react";
+//components 
+
+import Error from '../../components/Error';
+import Loader from '../../components/Loader';
+
+const GET_ROCKET_INFO = gql`
+    query Rockets($rocketId: ID!) {
+        rocket(id: $rocketId) {
+            name
+            height {
+            feet
+            meters
+            }
+            diameter {
+            feet
+            meters
+            }
+            stages
+            cost_per_launch
+            engines {
+            type
+            number
+            propellant_1
+            propellant_2
+            }
+    }
+}
+`;
 
 
-const RocketPage = ({ match }) => {
-    const rocketId = useParams();
+const RocketPage = () => {
+    const name = useParams().id;
+    const location = useLocation();
+    const rocketId = location.state?.id;
+
+    const { data, loading, error } = useQuery(GET_ROCKET_INFO,
+        {
+            variables: { rocketId }
+        })
+
+    if (loading) return <Loader />
+    if (error) return <Error />
+
+    console.log(data.rocket.name)
+
     return null;
 };
 
