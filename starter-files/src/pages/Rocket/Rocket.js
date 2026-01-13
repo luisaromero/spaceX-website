@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { gql } from '@apollo/client';
 import { useQuery } from "@apollo/client/react";
+import Rocket from '../../components/Rocket';
 //components 
 
 import Error from '../../components/Error';
@@ -45,9 +46,7 @@ const RocketPage = () => {
     if (loading) return <Loader />
     if (error) return <Error />
 
-    console.log(data.rocket.name)
-
-    return null;
+    return <Rocket rocket={{ ...data.rocket, id: rocketId }} />;
 };
 
 export default RocketPage;
