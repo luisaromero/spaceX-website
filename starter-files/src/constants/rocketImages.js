@@ -1,14 +1,16 @@
-import falcon1 from '../assets/falcon-1.png';
-import falcon9 from '../assets/falcon-9.png';
-import falconHeavy from '../assets/falcon-heavy.png';
+import falcon9 from '../assets/falcon9.png';
+import falconHeavy from '../assets/falconheavy.png';
 import starship from '../assets/starship.png';
+import merlin from '../assets/merlin.png';
+import raptor from '../assets/raptor.png';
+import raptor3 from '../assets/raptor3.png';
+
 
 export const ROCKET_IMAGES = {
-    'falcon 9': falcon9,
-    'falcon heavy': falconHeavy,
-    'starship': starship,
-    'falcon 9': falcon9,
-    'falcon heavy': falconHeavy,
-    'starship': starship,
-
+    'Falcon 9': falcon9,
+    'Falcon Heavy': falconHeavy,
+    'Starship': starship,
+    'Merlin': merlin,
+    'Raptor': raptor,
+    'Raptor 3': raptor3,
 };

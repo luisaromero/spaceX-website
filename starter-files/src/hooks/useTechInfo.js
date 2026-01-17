@@ -1,3 +1,5 @@
+import { ROCKET_IMAGES } from "../constants/rocketImages";
+
 const useTechInfo = ({ name, rocket, engine, isEngine }) => {
     const header = name.toUpperCase();
 
@@ -20,8 +22,7 @@ const useTechInfo = ({ name, rocket, engine, isEngine }) => {
 
     const body = [firstRow, secondRow, thirdRow, fourthRow];
 
-    const imageName = name.toLowerCase().replace(' ', '-');
-    const img = `/assets/rockets/${imageName}.png`;
+    const img = ROCKET_IMAGES[name];
 
     return {
         header,
