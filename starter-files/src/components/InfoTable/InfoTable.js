@@ -3,7 +3,6 @@ import React from 'react';
 import './style.scss';
 
 const InfoTable = ({ title, data }) => {
-    console.log(title, data)
     return (
         < div className="info-table col-12 col-md-8 col-lg-7 d-flex flex-column justify-content-center" >
             <h5>{title}</h5>

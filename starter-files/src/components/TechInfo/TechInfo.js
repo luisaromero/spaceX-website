@@ -4,6 +4,7 @@ import InfoTable from '../InfoTable';
 
 const TechInfo = ({ name, rocket, engine, isEngine }) => {
     const tableContent = useTechInfo({ name, rocket, engine, isEngine })
+    console.log({ name })
     return (
         <div className="container d-flex flex-column justify-content-around tech-info__container">
             <div
@@ -13,6 +14,7 @@ const TechInfo = ({ name, rocket, engine, isEngine }) => {
             >
                 <InfoTable title={tableContent.header} data={tableContent.body} />
                 <div className="col col-md-4 d-flex justify-content-center">
+                    <img src={tableContent.img} alt={name} />
 
                 </div>
             </div>

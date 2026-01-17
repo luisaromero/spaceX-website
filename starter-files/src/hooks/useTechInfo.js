@@ -20,7 +20,8 @@ const useTechInfo = ({ name, rocket, engine, isEngine }) => {
 
     const body = [firstRow, secondRow, thirdRow, fourthRow];
 
-    const img = `../assets/${name.replace(/\s+/g, '')}.png`;
+    const imageName = name.toLowerCase().replace(' ', '-');
+    const img = `/assets/rockets/${imageName}.png`;
 
     return {
         header,
