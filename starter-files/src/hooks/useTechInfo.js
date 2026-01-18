@@ -1,7 +1,6 @@
 import { ROCKET_IMAGES } from "../constants/rocketImages";
 
 const useTechInfo = ({ name, rocket, engine, isEngine }) => {
-    console.log({ rocket })
     const header = name.toUpperCase();
 
     const firstRow = {
