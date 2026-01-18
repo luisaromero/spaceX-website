@@ -1,6 +1,7 @@
 import { ROCKET_IMAGES } from "../constants/rocketImages";
 
 const useTechInfo = ({ name, rocket, engine, isEngine }) => {
+    console.log({ rocket })
     const header = name.toUpperCase();
 
     const firstRow = {
@@ -17,12 +18,14 @@ const useTechInfo = ({ name, rocket, engine, isEngine }) => {
     };
     const fourthRow = {
         title: isEngine ? 'THRUST TO WEIGHT' : 'COST PER LAUNCH',
-        value: isEngine ? engine.thrust_to_weight : rocket.cost,
+        value: isEngine ? engine.thrust_to_weight : rocket.cost
     };
 
     const body = [firstRow, secondRow, thirdRow, fourthRow];
 
-    const img = ROCKET_IMAGES[name];
+    const nameLowerCase = name.toLowerCase();
+
+    const img = ROCKET_IMAGES[nameLowerCase]
 
     return {
         header,

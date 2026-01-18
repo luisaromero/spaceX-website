@@ -17,6 +17,7 @@ const TechInfo = ({ name, rocket, engine, isEngine }) => {
                     <img src={tableContent.img} alt={name} />
 
                 </div>
+
             </div>
         </div>
     );

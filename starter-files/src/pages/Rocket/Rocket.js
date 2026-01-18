@@ -27,6 +27,7 @@ const GET_ROCKET_INFO = gql`
             number
             propellant_1
             propellant_2
+            thrust_to_weight
             }
     }
 }

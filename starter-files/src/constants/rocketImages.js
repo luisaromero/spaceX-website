@@ -7,10 +7,10 @@ import raptor3 from '../assets/raptor3.png';
 
 
 export const ROCKET_IMAGES = {
-    'Falcon 9': falcon9,
-    'Falcon Heavy': falconHeavy,
-    'Starship': starship,
-    'Merlin': merlin,
-    'Raptor': raptor,
-    'Raptor 3': raptor3,
+    'falcon 9': falcon9,
+    'falcon heavy': falconHeavy,
+    'starship': starship,
+    'merlin': merlin,
+    'raptor': raptor,
+    'paptor 3': raptor3,
 };
