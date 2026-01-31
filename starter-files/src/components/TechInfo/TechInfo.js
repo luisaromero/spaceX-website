@@ -4,7 +4,6 @@ import InfoTable from '../InfoTable';
 
 const TechInfo = ({ name, rocket, engine, isEngine }) => {
     const tableContent = useTechInfo({ name, rocket, engine, isEngine })
-    console.log({ name })
     return (
         <div className="container d-flex flex-column justify-content-around tech-info__container">
             <div
