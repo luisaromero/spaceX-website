@@ -9,6 +9,7 @@ const LaunchArticle = ({ name, link, imgUrl, description }) => (
             <img srcSet={`${imgUrl}`} alt={name} className="article__image" />
             <div className="article__header">
                 <h5 className="m-0 p-2">{name}</h5>
+                <h2 className="m-0 p-2">Description Launch: </h2>
                 <p className="m-0 p-2">{description}</p>
             </div>
         </Link>
